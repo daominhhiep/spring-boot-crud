@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Home Page</h1>
+<div>
+    <span>Language:</span> <a href="?lang=en">English</a> | <a href="?lang=vi">Vn</a>
+</div>
+<br>
+<div>
+    <a th:href="@{/login}">Login</a>
+</div>
+<div>
+    <a th:href="@{/create}">Create new user</a>
+</div>
+
+</body>
+</html>
