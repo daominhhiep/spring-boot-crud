@@ -26,7 +26,7 @@ public class AdminController {
 
     @GetMapping("/admin")
     public String getAdminPage() {
-        return "/admin/welcome";
+        return "admin/welcome";
     }
 
     @GetMapping("/admin/users")
@@ -42,11 +42,11 @@ public class AdminController {
     public ModelAndView showDeleteForm(@PathVariable Long id){
         MyUser user = myUserService.findById(id);
         if(user != null) {
-            ModelAndView modelAndView = new ModelAndView("/admin/delete");
+            ModelAndView modelAndView = new ModelAndView("admin/delete");
             modelAndView.addObject("user", user);
             return modelAndView;
         }else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
+            ModelAndView modelAndView = new ModelAndView("error.404");
             return modelAndView;
         }
     }

@@ -54,7 +54,7 @@ public class UserController {
     public ModelAndView saveUser(@ModelAttribute("user") MyUser myUser) {
         myUser.setRole(roleService.getRoleUser());
         myUserService.save(myUser);
-        ModelAndView modelAndView = new ModelAndView("/create");
+        ModelAndView modelAndView = new ModelAndView("create");
         modelAndView.addObject("user", new MyUser());
         modelAndView.addObject("message", "New user created successfully");
         return modelAndView;
