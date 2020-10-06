@@ -45,7 +45,7 @@ public class UserController {
 
     @GetMapping("/create")
     public ModelAndView showCreatForm() {
-        ModelAndView modelAndView = new ModelAndView("/create");
+        ModelAndView modelAndView = new ModelAndView("create");
         modelAndView.addObject("user", new MyUser());
         return modelAndView;
     }
